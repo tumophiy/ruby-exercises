@@ -7,7 +7,6 @@ def stock_picker(input_array)
   end
   best_pair = { [0, 0] => 0 }
   information.each do |key, value|
-    # print "my pair =#{value[1] - value[0]}, and standard result = #{best_pair.values[0][1] - best_pair.values[0][0]}"
     best_pair = { key => value } if value[1] - value[0] > best_pair.values[0][1] - best_pair.values[0][0]
   end
   best_pair.keys.first
